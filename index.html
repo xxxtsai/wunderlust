@@ -14,11 +14,15 @@
   <header>
   <h1>Wunderlust Travel 
 </h1>
-     <picture>
-                <source srcset="https://github.com/xxxtsai/wanderlust-images/blob/main/logo-L.png" media="(min-width: 1200px)">
-                <source srcset="https://github.com/xxxtsai/wanderlust-images/blob/main/logo-M.png" media="(min-width: 600px)">
-                <img src="https://github.com/xxxtsai/wanderlust-images/blob/main/logo-S.png" alt="logo" class="responsive-img">
-            </picture>
+
+<img src="https://github.com/xxxtsai/wanderlust-images/blob/main/logo-S.png"
+     srcset="https://github.com/xxxtsai/wanderlust-images/blob/main/logo-S.png 600w,
+     https://github.com/xxxtsai/wanderlust-images/blob/main/logo-M.png 1200w,
+             https://github.com/xxxtsai/wanderlust-images/blob/main/logo-L.png 2000w"
+     sizes="(max-width: 600px) 600px,
+            (max-width: 1200px) 1200px,
+            2000px"
+     alt="Logo">
     
   <p>Let Wunderlust Travel help you plan the trip of your dreams!
 </p>
