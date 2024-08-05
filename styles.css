@@ -1,0 +1,712 @@
+/* Name: Pei Yu Tsai */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+h2, h3{
+	font-family: "Molle", cursive;
+}
+p,label,input,span,h4,q,legend,a{
+	font-family: "Montserrat", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select{
+	/* border-color:#9B26B0; */
+	border: 1px #9B26B0 solid;
+	width:100%;
+	height:30px;
+	font-size:10px;
+}
+
+input:focus{
+	outline:none;
+}
+
+body{
+	width:100vw;
+	/* min-width:1920px; */
+
+}
+
+a#skip{
+	display:none;
+}
+
+/* Mobile */
+header{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	background-image: linear-gradient(to bottom, #55BCD5 , transparent);
+	position: relative;
+}
+
+header a#logo{
+	display:block;
+}
+
+header a#logo img{
+	width:150px;
+}
+
+header .Wunderlust{
+	padding: 10px 20px;
+}
+header .Wunderlust h1{
+	font-size:30px;
+	font-family: "Molle", cursive;
+	font-weight: 400;
+	font-style: italic;
+}
+header .Wunderlust p{
+	font-size:12px;
+	line-height: 1.5;
+	font-family: "Montserrat", sans-serif;
+}
+header .sr-only,
+header input#toggle{
+	display:none;
+}
+header label{
+	display:block;
+	position: absolute;
+	top: 20px;
+	right:0;
+	background-color: #F6D64A;
+	padding: 12px 45px;
+	font-weight: 600;
+	box-sizing: border-box;
+}
+
+header input:checked ~ label {
+	width: 100%;
+	background-color: #222222;
+	top: 10px;
+	left:0;
+	padding: 12px 0px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+}
+header input:checked ~ ul{
+	display: block;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+
+}
+header input:checked ~ ul > li{
+	width: 100%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #55BCD5;
+	border: 0.5px #5b5b5b solid;
+}
+
+header ul{
+	display: none;
+}
+
+header ul li{
+	margin-left:5px;
+	background-color: #ffffff;
+	padding:2px 5px;
+}
+
+header ul li.active {
+	background-color: #F6D64A;
+}
+
+header ul li a{
+	text-decoration:none;
+	color: #000;
+	font-weight:800;
+	font-size:9px;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+}
+main#main-content{
+	width:100%;
+}
+#intro{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 50px 0;
+	/* padding: 0 8%; */
+	box-sizing: border-box;
+}
+#intro .text{
+	padding: 0 8%;
+	margin-bottom: 20px;
+}
+#intro .text p{
+	font-family: "Montserrat", sans-serif;
+	font-size:10px;
+	line-height:1.5;
+	font-weight:500;
+	margin-top: 10px
+}
+#intro #img-grid{
+	display:flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	flex-wrap:wrap;	
+	/* width:100%; */
+}
+#intro #img-grid img{
+	width:100%;
+	/* height:120px; */
+	margin-bottom:5px;
+}
+#intro #img-grid picture{
+	width:100%;
+}
+#intro #img-grid picture img{
+	width:100%;
+}
+#plan{
+	background-color:#F6D64A;
+	padding: 50px 8%;
+	box-sizing: border-box;
+}
+#plan h3{
+	margin-bottom:20px;
+}
+#plan .item{
+	display:flex;
+	flex-direction: column;
+	/* justify-content:space-between; */
+}
+
+#plan .item section{
+	background-color:#55BCD5;
+	width:100%;
+	height: 200px;
+	padding:10px;
+	box-sizing:border-box;
+	border:2px #ffffff solid;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+#plan .item section h4{
+	text-transform:uppercase;
+	font-size: 14px;
+	font-weight:600;
+	text-align:center;
+	margin-bottom:10px;
+}
+#plan .item section a {
+	display:block;
+	display:flex;
+	/* flex-direction:row; */
+	justify-content:center;
+	/* background-color:#000; */
+	align-items:center;
+	height:80%;
+}
+#plan .item section a img {
+	width:52%;
+	height:100%;
+}
+#plan .item section:nth-of-type(2) a img{
+	/* width:70%; */
+	transform:scale(1.2);
+}
+#testimonials{
+	padding: 50px 8%;
+	box-sizing: border-box;
+}
+#testimonials h3{
+	margin-bottom:20px;
+}
+#testimonials .item{
+	display:flex;
+	flex-direction: column;
+	/* justify-content:space-between; */
+
+}
+#testimonials .item section{
+	width:100%;
+	/* background-color:#f00000; */
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	margin-bottom: 20px;
+}
+#testimonials .item section img{
+	width:50%
+}
+#testimonials .item section h4{
+	font-size: 14px;
+	font-weight: 600;
+	margin-top:8px;
+}
+#testimonials .item section p{
+	font-size: 8px;
+	margin-top: 6px;
+	font-weight: 500;
+}
+#testimonials .item section q{
+	text-align:center;
+	font-style: italic;
+	font-size: 8px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+#about{
+	padding: 50px 8%;
+	box-sizing: border-box;
+	background-color:#499BD2;
+}
+#about h3{
+	margin-bottom:20px;
+}
+#about .item{
+	display:flex;
+	flex-wrap: wrap;
+	width:100%;
+	/* margin: 0 auto; */
+}
+#about .item section{
+	width:48%;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	margin-bottom: 20px;
+}
+#about .item section img{
+	width:50%;
+	height:60%;
+	/* background-color:#cdf834; */
+	margin-bottom:5px;
+}
+#about .item section h4{
+	font-weight:700;
+	font-size:16px;
+	margin-bottom:5px;
+}
+
+#about .item section p{
+	font-weight:500;
+	font-size:8px;
+}
+
+#contact{
+	padding: 50px 8%;
+	box-sizing: border-box;
+}
+#contact h3{
+	margin-bottom:20px;
+}
+#contact .form-required{
+	color:#9B26B0;
+	font-size:10px;	
+}
+#contact .required{
+	color:#9B26B0;
+	font-size:10px;
+}
+#contact form{
+	width:100%;
+	display:flex;
+	flex-direction: column;
+	/* justify-content:space-between; */
+	box-sizing:border-box;
+}
+#contact form #names{
+	width:100%;
+	/* background-color:#000000; */
+}
+#contact form #names .fname{
+	display:flex;
+	flex-direction:column;
+	margin-bottom:10px;
+}
+#contact form #names .lname{
+	display:flex;
+	flex-direction:column;
+}
+#contact form #names label{
+	text-transform:uppercase;
+	font-size:10px;
+	font-weight:600;
+	margin-bottom:2px;
+}
+#contact form #nums{
+	width:100%;
+	text-transform:uppercase;
+	font-size:10px;
+	font-weight:600;
+	margin-bottom:2px;
+	box-sizing:border-box;
+}
+#nums fieldset{
+	margin:10px 0;
+	display:flex;
+	flex-direction: column;
+
+}
+#nums fieldset legend{
+	text-transform:uppercase;
+	font-size:10px;
+	font-weight:600;
+	margin:10px 0;
+}
+#nums fieldset label{
+	display:flex;
+	align-items:center;
+	height:30px;
+}
+#nums fieldset label .radio-input{
+	margin-right:10px;
+}
+#nums fieldset label span input{
+	/* border: 1px #9B26B0 solid; */
+	/* background-color: #9B26B0; */
+	color: #9B26B0;
+	accent-color: #9B26B0;
+}
+
+#nums .email{
+	display:flex;
+	flex-direction:column;
+	margin-bottom:10px;
+}
+#nums .email label{
+	font-size:10px;
+	font-weight:600;
+	margin-bottom:2px;
+}
+#nums .phone{
+	display:flex;
+	flex-direction:column;
+}
+#nums .phone label{
+	font-size:10px;
+	font-weight:600;
+	margin-bottom:2px;
+}
+#selects{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	margin-top: 20px;
+}
+#selects label{
+	text-transform:uppercase;
+	font-size:10px;
+	font-weight:600;
+	margin-bottom:2px;
+}
+#selects .custom-select{
+	background-color:red;
+	margin-bottom: 10px;
+}
+#selects #mySubmit{
+	width:100%;
+	background-color:#9B26B0;
+	color:#ffffff;
+	align-self:flex-end;
+}
+footer{
+	display:flex;
+	flex-direction: column;
+	/* justify-content:space-between; */
+	padding: 10px 8%;
+	box-sizing: border-box;
+	background-color:#EAEAEA;
+}
+footer p{
+	font-size:8px;
+	color:#000000;
+	width:100%;
+	font-weight:500;
+	text-align: center;
+	margin-bottom: 5px;
+}
+footer a{
+	display:block;
+	width:100%;
+	text-align: center;
+	font-size:8px;
+	text-decoration:none;
+	color:#000000;
+	font-weight:500;
+	margin-bottom: 5px;
+}
+
+
+/* medium */
+@media (min-width:320px){
+	header{
+		width:100%;
+		display:flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+		background-image: linear-gradient(to bottom, #55BCD5 , transparent);
+	}
+	header a#logo{
+		display:block;
+		width: 40%;
+		margin-right: -60px;
+	}
+	header a#logo img{
+		width:150px;
+	}
+	header .Wunderlust{
+		width: 60%;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+	header label{
+		display:none;
+		position: static;
+	}
+	header nav{
+		width: 100%;
+		padding:0 8%;
+	}
+	header ul{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	header ul li{
+		margin-left:5px;
+		background-color: #ffffff;
+		padding:10px;
+	}
+	#intro{
+		flex-direction: column;
+		padding: 0 8%;
+	}
+	#intro .text{
+		padding: 0;
+	}
+	#intro #img-grid{
+		display:flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap:wrap;	
+	}
+	#intro #img-grid img{
+		width:49%;
+	}
+	#intro #img-grid picture img{
+		width:100%;
+		height:200px;
+	}
+	#plan{
+		background-color:#F6D64A;
+		padding: 50px 8%;
+		box-sizing: border-box;
+	}
+	#plan h3{
+		margin-bottom:20px;
+	}
+	#plan .item{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:space-between;
+	}
+	
+	#plan .item section{
+		width:48%;
+		height: 160px;
+	}
+	#testimonials .item{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:space-between;
+	
+	}
+	#testimonials .item section{
+		width:48%;
+	}
+	#about .item section{
+		width:24%;
+		display:flex;
+		flex-direction: column;
+		align-items:center;
+		margin-bottom: 20px;
+	}
+	#nums fieldset{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	#nums fieldset legend{
+		width: 100%;
+	}
+	#nums fieldset label{
+		width: 30%;
+	}
+	#nums fieldset label .radio-input{
+		margin-right:10px;
+	}
+	#nums .email{
+		display:flex;
+		flex-direction:column;
+		margin-bottom:10px;
+	}
+	#nums .email label{
+		font-size:10px;
+		font-weight:600;
+		margin-bottom:2px;
+	}
+	#nums .phone{
+		display:flex;
+		flex-direction:column;
+	}
+	#nums .phone label{
+		font-size:10px;
+		font-weight:600;
+		margin-bottom:2px;
+	}
+	#selects #mySubmit{
+		width:40%;
+	}
+	footer{
+		flex-direction: row;
+	}
+	footer p{
+		width:60%;
+		text-align:left ;
+	}
+	footer a{
+		width:20%;
+	}
+}
+
+/* large */
+@media (min-width:768px){
+	header a#logo{
+		width: 20%;
+		margin-right: -40px;
+	}
+	header .Wunderlust{
+		width: 50%;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+	header label{
+		display:none;
+		position: static;
+	}
+	header ul{
+		position: absolute;
+		top:0;
+		right:0;
+		width: 40%;
+	}
+	header ul li{
+		padding:2px 3px;
+	}
+	#intro{
+		flex-direction: row;
+		padding: 0 8%;
+	}
+	#intro .text{
+		width: 48%;
+	}
+	#intro #img-grid{
+		width: 48%;
+	}
+	#plan .item{
+		flex-wrap: nowrap;
+	}
+	#plan .item section{
+		width:24%;
+		height: 160px;
+	}
+	#testimonials .item{
+		flex-wrap: nowrap;
+	}
+	#testimonials .item section{
+		width:24%;
+	}
+	#about .item section{
+		width:24%;
+		display:flex;
+		flex-direction: column;
+		align-items:center;
+		margin-bottom: 20px;
+	}
+	#contact form{
+		width:100%;
+		flex-direction: row;
+		justify-content:space-between;
+	}
+	#contact form #names{
+		width: 30%;
+	}
+	#contact form #nums{
+		width: 30%;
+	}
+	#contact form #selects{
+		width: 30%;
+	}
+	#nums fieldset{
+		margin: 0;
+	}
+	#nums fieldset legend{
+		margin: 0;
+		padding: 0;
+	}
+	#selects{
+		margin-top: 0px;
+	}
+	footer a{
+		width:20%;
+		text-align: end;
+	}
+}
